@@ -430,7 +430,10 @@ class PlatformSetup
 					}
 
 				case "switch":
-    				setupSwitch();
+					if (System.hostPlatform == WINDOWS)
+					{
+    					setupSwitch();
+					}	
 
 				case "":
 					switch (CommandLineTools.defaultLibrary)
