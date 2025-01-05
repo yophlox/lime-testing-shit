@@ -429,6 +429,9 @@ class PlatformSetup
 						setupIOS();
 					}
 
+				case "switch":
+    				setupSwitch();	
+
 				case "":
 					switch (CommandLineTools.defaultLibrary)
 					{
@@ -807,6 +810,17 @@ class PlatformSetup
 		{
 			System.openURL(appleXcodeURL);
 		}
+	}
+
+	public static function setupSwitch():Void {
+		Log.println("\x1b[1mIn order to build applications for Nintendo Switch, you must have");
+		Log.println("the Nintendo Switch SDK installed.\x1b[0m");
+		Log.println("");
+		
+		getDefineValue("NINTENDO_SDK", "Absolute path to Nintendo Switch SDK");
+		
+		Log.println("");
+		Log.println("Setup complete.");
 	}
 
 	public static function setupLime():Void
