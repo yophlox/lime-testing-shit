@@ -430,7 +430,7 @@ class PlatformSetup
 					}
 
 				case "switch":
-    				setupSwitch();	
+    				setupSwitch();
 
 				case "":
 					switch (CommandLineTools.defaultLibrary)
@@ -821,6 +821,8 @@ class PlatformSetup
 		
 		Log.println("");
 		Log.println("Setup complete.");
+
+		// commit test
 	}
 
 	public static function setupLime():Void
